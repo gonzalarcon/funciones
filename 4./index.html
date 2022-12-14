@@ -19,7 +19,7 @@
     
     <script>
         let color = "white"
-        document.addEventListener('keydown', function (event) {
+        document.addEventListener('keydown', (event) => {
             if (event.key === 'a') {
             color = "blue"
             } else if (event.key === 's') {
@@ -31,9 +31,11 @@
             }
             })
 
-        document.addEventListener('click', function(event){
+        document.addEventListener('click', (event) => {
+            if (event.target.id){
             let div=document.getElementById(event.target.id);
             div.style.backgroundColor = color;
+        }
         })
     </script>
 </body>
